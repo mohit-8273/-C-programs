@@ -1,18 +1,24 @@
-#include<stdio.h>
-int max(int a,int b)
-{
-    return(a>b?a:b);
-}
-int min(int a,int b)
-{
-    return(a>b?b:a);
-}
+#include <stdio.h>
+
 int main()
 {
-    int num1,num2;
-    scanf("%d",&num1);
-    scanf("%d",&num2);
-    int b=max(num1,num2);
-    int c=min(num1,num2);
-    printf("max %d min %d",b,c);
+    int num1, num2;
+    printf("Enter two numbers to find maximum: ");
+    scanf("%d%d", &num1, &num2);
+
+    /* Expression (num1 > num2) will return either 0 or 1 */
+    switch(num1 > num2)
+    {   
+        /* If condition (num1>num2) is false */
+        case 0: 
+            printf("%d is maximum", num2);
+            break;
+
+        /* If condition (num1>num2) is true */
+        case 1: 
+            printf("%d is maximum", num1);
+            break;
+    }
+
+    return 0;
 }
